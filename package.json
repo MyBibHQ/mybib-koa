@@ -1,0 +1,37 @@
+{
+  "name": "mybib-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "tslint -c tslint.json --project tsconfig.json --fix && rimraf ./dist/**/* && copyfiles -u 1 ./src/views/**/*.html ./src/static/**/* dist",
+    "dev": "./node_modules/.bin/tsc-watch --onSuccess \"node .\""
+  },
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.0",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-ejs": "^4.1.2",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.11",
+    "sqlite3": "^4.0.4",
+    "uuid": "^3.3.2",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.10",
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "ts-lint": "^4.5.1",
+    "tsc-watch": "^1.0.30",
+    "typescript": "^3.1.6"
+  }
+}
